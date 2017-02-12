@@ -1,6 +1,6 @@
 # Getting MEAN Second Edition application code
 
-This is the code for the sample 'Loc8r' application that is built through the course of my book [Getting MEAN](https://www.manning.com/books/getting-mean-with-mongo-express-angular-and-node).
+This is the code for the sample 'Loc8r' application that is built through the course of my book Getting MEAN Second Edition.
 
 Getting MEAN Second Edition is published by Manning, and teaches readers how to develop web applications end-to-end using the MEAN stack with Node 6 and Angular 2. It is currently in early access through the MEAP program, with new chapters being released regularly.
 
@@ -10,7 +10,7 @@ Getting MEAN Second Edition is published by Manning, and teaches readers how to 
 
 There will be named branches for the various states of the code throughout the book:
 
-* `master` **Chapter 3 start**: A blank Express 4.9.0 project
+* `master` **Chapter 3 start**: A blank Express 4.14.0 project
 * `chapter-03` **Chapter 3 end**: Creating and setting up a MEAN project
 * `chapter-04-views` **Chapter 4 mid-point**: The data is hard coded into views
 * `chapter-04` **Chapter 4 end**: Building a static site with Node.js and Express
