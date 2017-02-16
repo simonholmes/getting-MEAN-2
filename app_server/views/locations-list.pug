@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  .row.banner
+    .col-12
+      h1 Loc8r
+        small &nbsp;Find places to work with wifi near you!
+  .row
+    .col-12.col-md-8
+      p test 1
+      p test 2
+      .row.list-group
+        .col-12.list-group-item.flex-column.align-items-start.list-group-item-clear
+          h4.d-flex.w-100.justify-content-between
+            a(href="/location") Starcups
+            small &nbsp;
+              i.fa.fa-star
+              i.fa.fa-star
+              i.fa.fa-star
+              i.fa.fa-star-o
+              i.fa.fa-star-o
+            span.badge.badge-pill.float-right.badge-default 100m
+          p.address 125 High Street, Reading, RG6 1PS
+          p Test paragraph
+          p
+            span.badge.badge-warning Hot drinks
+            span.badge.badge-warning Food
+            span.badge.badge-warning Premium wifi
+    .col-12.col-md-4
+      p.lead Loc8r helps you find places to work when out and about.
