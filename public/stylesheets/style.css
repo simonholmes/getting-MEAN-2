@@ -1,5 +1,11 @@
 @import url("//fonts.googleapis.com/css?family=Lobster|Cabin:400,700");
 
+body {
+  font-family: "Cabin", Arial, sans-serif;
+  color: #ffffff;
+  background-color: #108a93;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Lobster', cursive;
 }
@@ -15,22 +21,43 @@ h1, h2, h3, h4, h5, h6 {
 
 .banner {
   margin-top: 4em;
+  border-bottom: 1px solid #469ea8;
+  margin-bottom: 1.5em;
+  padding-bottom: 0.5em;
 }
 
 h1 small {
   color: #aaa;
 }
 
-.list-group-item-clear {
-  background-color: transparent;
+.listing-item {
+  background-color: #469ea8;
+  padding-top: 0.75rem;
+}
+
+.badge-default {
+  background-color: #ad1d28;
+  border-color: #911821;
+}
+
+h4 a, h4 a:hover {
+  color: #fff;
+}
+
+h4 small {
+  font-size: 60%;
+  line-height: 200%;
+  color: #aaa;
+}
+
+h4 .badge {
+  /*float: right;*/
+}
+
+p.facilities span.badge {
+  margin-right:2px;
 }
 
 legend {
   font-family: 'Lobster', cursive;
-}
-
-body {
-  font-family: "Cabin", Arial, sans-serif;
-  color: #ffffff;
-  background-color: #108a93;
 }
