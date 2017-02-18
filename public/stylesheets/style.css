@@ -50,10 +50,6 @@ h4 small {
   color: #aaa;
 }
 
-h4 .badge {
-  /*float: right;*/
-}
-
 p.facilities span.badge {
   margin-right:2px;
 }
