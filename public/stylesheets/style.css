@@ -30,9 +30,8 @@ h1 small {
   color: #aaa;
 }
 
-.listing-item {
+.card {
   background-color: #469ea8;
-  padding-top: 0.75rem;
 }
 
 .badge-default {
@@ -50,7 +49,11 @@ h4 small {
   color: #aaa;
 }
 
-p.facilities span.badge {
+.address {
+  margin-bottom: 0.5rem;
+}
+
+.facilities span.badge {
   margin-right:2px;
 }
 
