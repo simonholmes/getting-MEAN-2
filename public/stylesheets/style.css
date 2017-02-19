@@ -52,6 +52,11 @@ h1 small {
   margin-bottom: 1em;
 }
 
+.reviewAuthor {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
 .badge-default, .btn-primary {
   background-color: #ad1d28;
   border-color: #911821;
