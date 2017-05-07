@@ -179,17 +179,17 @@ const reviewsDeleteOne = function (req, res) {
               "message": "reviewid not found"
             });
         } else {
-          location.reviews.id(req.params.reviewid).remove();    #B
-          location.save((err) => {                         #C
+          location.reviews.id(req.params.reviewid).remove();
+          location.save((err) => {
             if (err) {
               res
                 .status(404)
-                .json(err);       #D
+                .json(err);
             } else {
               updateAverageRating(location._id);
               res
                 .status(204)
-                .json(null);      #D
+                .json(null);
             }
           });
         }
