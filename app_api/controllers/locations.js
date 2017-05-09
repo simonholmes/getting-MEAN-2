@@ -29,6 +29,15 @@ const locationsListByDistance = function (req, res) {
     maxDistance: 20000,
     num: 10
   };
+  if ((!lng && lng !==0 ) || (!lat && lat !== 0) || ! maxDistance) {
+    console.log('locationsListByDistance missing params');
+    res
+      .status(404)
+      .json({
+        message : 'lng, lat and maxDistance query parameters are all required'
+      });
+    return;
+  }
   Loc.geoNear(point, geoOptions, (err, results, stats) => {
     const locations = _buildLocationList(req, res, results, stats);
     console.log('Geo Results', results);
