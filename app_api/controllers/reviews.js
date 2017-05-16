@@ -241,7 +241,7 @@ const _updateAverageRating = function(locationid) {
     .select('rating reviews')
     .exec((err, location) => {
       if (!err) {
-        doSetAverageRating(location); 
+        _doSetAverageRating(location); 
       }
     });
 };
