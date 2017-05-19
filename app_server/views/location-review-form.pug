@@ -6,7 +6,9 @@ block content
       h1= pageHeader.title
   .row
     .col-12.col-md-8
-      form(action="", method="post", role="form")
+      form#addReview(action="", method="post", role="form")
+        - if (error == "val")
+          .alert.alert-danger(role="alert") All fields required, please try again
         .form-group.row
           label.col-10.col-sm-2.col-form-label(for="name") Name
           .col-12.col-sm-10
