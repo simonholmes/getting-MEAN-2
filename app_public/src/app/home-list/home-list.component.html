@@ -3,13 +3,9 @@
     <h4>
       <a href="/location/{{location.id}}">{{location.name}}</a>
       <small>&nbsp;
-        <i class="fa fa-star{{ location.rating < 1 ? '-o' : '' }}"></i>
-        <i class="fa fa-star{{ location.rating < 2 ? '-o' : '' }}"></i>
-        <i class="fa fa-star{{ location.rating < 3 ? '-o' : '' }}"></i>
-        <i class="fa fa-star{{ location.rating < 4 ? '-o' : '' }}"></i>
-        <i class="fa fa-star{{ location.rating < 5 ? '-o' : '' }}"></i>
+        <app-rating-stars [thisRating]="location.rating"></app-rating-stars>
       </small>
-      <span class="badge badge-pill badge-default float-right">{{location.distance}}km</span>
+      <span class="badge badge-pill badge-default float-right">{{location.distance | distance}}</span>
     </h4>
     <p class="address">{{location.address}}</p>
     <div class="facilities">

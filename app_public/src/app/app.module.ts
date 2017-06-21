@@ -5,11 +5,15 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { HomeListComponent } from './home-list/home-list.component';
+import { RatingStarsComponent } from './rating-stars/rating-stars.component';
+import { DistancePipe } from './distance.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeListComponent
+    HomeListComponent,
+    RatingStarsComponent,
+    DistancePipe
   ],
   imports: [
     BrowserModule,
