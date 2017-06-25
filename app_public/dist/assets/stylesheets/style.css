@@ -1,0 +1,85 @@
+@import url("//fonts.googleapis.com/css?family=Lobster|Cabin:400,700");
+
+body {
+  font-family: "Cabin", Arial, sans-serif;
+  color: #ffffff;
+  background-color: #108a93;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lobster', cursive;
+}
+
+.navbar {
+  background-color: #ad1d28;
+  border-color: #911821;
+}
+
+.navbar-brand {
+  font-family: 'Lobster', cursive;
+}
+
+.banner {
+  margin-top: 4em;
+  border-bottom: 1px solid #469ea8;
+  margin-bottom: 1.5em;
+  padding-bottom: 0.5em;
+}
+
+h1 small {
+  color: #aaa;
+}
+
+.card {
+  background-color: #469ea8;
+}
+
+.card-primary {
+  border-color: #a2ced3;
+  margin-bottom: 1rem;
+}
+
+.review-header {
+  background-color: #31727a;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.review {
+  margin-right: -20px;
+  margin-left: -20px;
+  margin-bottom: 1em;
+}
+
+.reviewAuthor {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.badge-default, .btn-primary {
+  background-color: #ad1d28;
+  border-color: #911821;
+}
+
+h4 a, h4 a:hover {
+  color: #fff;
+}
+
+h4 small {
+  font-size: 60%;
+  line-height: 200%;
+  color: #aaa;
+}
+
+.address {
+  margin-bottom: 0.5rem;
+}
+
+.facilities span.badge {
+  margin-right:2px;
+}
+
+legend {
+  font-family: 'Lobster', cursive;
+}

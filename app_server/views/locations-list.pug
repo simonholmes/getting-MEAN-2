@@ -10,19 +10,27 @@ block content
   .row
     .col-12.col-md-8
       .error= message
+
+      app-home-list Loading...
       
-      each location in locations
-        .card
-          .card-block
-            h4
-              a(href=`/location/${location._id}`)= location.name
-              small &nbsp;
-                +outputRating(location.rating)
-              span.badge.badge-pill.badge-default.float-right= location.distance
-            p.address= location.address
-            .facilities
-              each facility in location.facilities
-                span.badge.badge-warning= facility
+      //- each location in locations
+      //-   .card
+      //-     .card-block
+      //-       h4
+      //-         a(href=`/location/${location._id}`)= location.name
+      //-         small &nbsp;
+      //-           +outputRating(location.rating)
+      //-         span.badge.badge-pill.badge-default.float-right= location.distance
+      //-       p.address= location.address
+      //-       .facilities
+      //-         each facility in location.facilities
+      //-           span.badge.badge-warning= facility
 
     .col-12.col-md-4
       p.lead= sidebar
+
+block scripts
+  script(src='/dist/inline.fc11966ed42f88618ebc.bundle.js')
+  script(src='/dist/polyfills.682313b6b06f69a5089e.bundle.js')
+  script(src='/dist/vendor.b5827d44ee5b8956cc5e.bundle.js')
+  script(src='/dist/main.2c71469d183963d9972e.bundle.js')

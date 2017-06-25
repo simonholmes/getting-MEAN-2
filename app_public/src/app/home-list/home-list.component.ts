@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Loc8rDataService } from '../loc8r-data.service';
 
 export class Location {
-  id: string;
+  _id: string;
   name: string;
   distance: number;
   address: string;
@@ -22,14 +22,14 @@ export class HomeListComponent implements OnInit {
 
   locations: Location[]
   // locations: Location[] = [{
-  //   id: '590d8dc7a7cb5b8e3f1bfc48',
+  //   _id: '590d8dc7a7cb5b8e3f1bfc48',
   //   name: 'Costy',
   //   distance: 14000.1234,
   //   address: 'High Street, Reading',
   //   rating: 3,
   //   facilities: ['hot drinks', 'food', 'power']
   // }, {
-  //   id: '590d8dc7a7cb5b8e3f1bfc48',
+  //   _id: '590d8dc7a7cb5b8e3f1bfc48',
   //   name: 'Starcups',
   //   distance: 120.542,
   //   address: 'High Street, Reading',
