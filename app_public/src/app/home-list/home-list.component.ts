@@ -20,7 +20,7 @@ export class HomeListComponent implements OnInit {
 
   constructor(private loc8rDataService: Loc8rDataService) { }
 
-  locations: Location[]
+  locations: Location[];
   // locations: Location[] = [{
   //   _id: '590d8dc7a7cb5b8e3f1bfc48',
   //   name: 'Costy',
@@ -37,11 +37,12 @@ export class HomeListComponent implements OnInit {
   //   facilities: ['wifi', 'food', 'hot drinks']
   // }];
 
-  getLocations(): void {
-    this.loc8rDataService.getLocations().then(locations => {
-      console.log('locations:', locations)
-      this.locations = locations;
-    });
+  private getLocations(): void {
+    this.loc8rDataService
+      .getLocations()
+        .then(foundLocations => {
+          this.locations = foundLocations;
+        });
   }
 
   ngOnInit() {
