@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { RouterModule }   from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 import { HomeListComponent } from './home-list/home-list.component';
 import { RatingStarsComponent } from './rating-stars/rating-stars.component';
@@ -13,6 +13,9 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { PageHeaderComponent } from './page-header/page-header.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { HtmlLineBreaksPipe } from './html-line-breaks.pipe';
+import { LocationDetailsComponent } from './location-details/location-details.component';
+import { DetailsPageComponent } from './details-page/details-page.component';
+import { MostRecentFirstPipe } from './most-recent-first.pipe';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { HtmlLineBreaksPipe } from './html-line-breaks.pipe';
     HomepageComponent,
     PageHeaderComponent,
     SidebarComponent,
-    HtmlLineBreaksPipe
+    HtmlLineBreaksPipe,
+    LocationDetailsComponent,
+    DetailsPageComponent,
+    MostRecentFirstPipe
   ],
   imports: [
     BrowserModule,
@@ -38,6 +44,10 @@ import { HtmlLineBreaksPipe } from './html-line-breaks.pipe';
       {
         path: 'about',
         component: AboutComponent
+      },
+      {
+        path: 'location/:locationId',
+        component: DetailsPageComponent
       }
     ])
   ],
