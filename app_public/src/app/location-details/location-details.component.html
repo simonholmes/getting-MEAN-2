@@ -5,7 +5,7 @@
     <div class="card card-primary">
       <div class="card-block">
         <h2 class="card-title">Opening hours</h2>
-          <p class="card-text" *ngFor="let time of location.openingTimes" [ngSwitch]="time.closed">
+        <p class="card-text" *ngFor="let time of location.openingTimes" [ngSwitch]="time.closed">
           {{ time.days }} :
           <span *ngSwitchCase="true">closed</span>
           <span *ngSwitchDefault>{{ time.opening + " - " + time.closing }}</span>
@@ -35,8 +35,48 @@
   <div class="col-12">
     <div class="card card-primary review-card">
       <div class="card-block">
-        <a href="/location/{{location._id}}/review/new" class="btn btn-primary float-right">Add review</a>
+        <button (click)="formVisible=true" class="btn btn-primary float-right">Add review</button>
+        <div *ngIf="formError" class="alert alert-danger" role="alert">
+          {{ formError }}
+        </div>
         <h2 class="card-title">Customer reviews</h2>
+        <div *ngIf="formVisible">
+            <form (ngSubmit)="onReviewSubmit()">
+                <hr>
+                <h4>Add your review</h4>
+                <div class="form-group row">
+                    <label for="name" class="col-sm-2 col-form-label">Name</label>
+                    <div class="col-sm-10">
+                        <input [(ngModel)]="newReview.name" id="name" name="name" required="required" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="rating" class="col-sm-2 col-form-label">Rating</label>
+                    <div class="col-sm-10">
+                        <select [(ngModel)]="newReview.rating" id="rating" name="rating">
+                            <option [ngValue]="5">5</option>
+                            <option [ngValue]="4">4</option>
+                            <option [ngValue]="3">3</option>
+                            <option [ngValue]="2">2</option>
+                            <option [ngValue]="1">1</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="review" class="col-sm-2 col-form-label">Review</label>
+                    <div class="col-sm-10">
+                        <textarea [(ngModel)]="newReview.reviewText" name="review" id="review" rows="5" class="form-control"></textarea>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary float-right" style="marginleft: 15px">Submit review</button>
+                        <button (click)="formVisible=false" type="button" class="btn btn-default float-right">Cancel</button>
+                    </div>
+                </div>
+                <hr>
+            </form>
+        </div>
         <div *ngFor="let review of location.reviews | mostRecentFirst" class="row review">
           <div class="col-12 no-gutters review-header">
             <app-rating-stars [thisRating]="review.rating"></app-rating-stars>
